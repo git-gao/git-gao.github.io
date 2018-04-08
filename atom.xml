@@ -5,9 +5,9 @@
   <subtitle>just go on</subtitle>
   <link href="/git-gao.github.io/atom.xml" rel="self"/>
   
-  <link href="https://github.com/git-gao/"/>
+  <link href="https://git-gao.github.io/"/>
   <updated>2018-04-08T16:16:13.922Z</updated>
-  <id>https://github.com/git-gao/</id>
+  <id>https://git-gao.github.io/</id>
   
   <author>
     <name>gaoy</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>CSS定位流</title>
-    <link href="https://github.com/git-gao/2018/04/07/CSS%E5%AE%9A%E4%BD%8D%E6%B5%81/"/>
-    <id>https://github.com/git-gao/2018/04/07/CSS定位流/</id>
+    <link href="https://git-gao.github.io/2018/04/07/CSS%E5%AE%9A%E4%BD%8D%E6%B5%81/"/>
+    <id>https://git-gao.github.io/2018/04/07/CSS定位流/</id>
     <published>2018-04-07T13:40:00.000Z</published>
     <updated>2018-04-08T16:16:13.922Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/git-gao/2018/04/03/hello-world/"/>
-    <id>https://github.com/git-gao/2018/04/03/hello-world/</id>
+    <link href="https://git-gao.github.io/2018/04/03/hello-world/"/>
+    <id>https://git-gao.github.io/2018/04/03/hello-world/</id>
     <published>2018-04-03T14:35:52.617Z</published>
     <updated>2018-04-07T13:43:28.876Z</updated>
     
