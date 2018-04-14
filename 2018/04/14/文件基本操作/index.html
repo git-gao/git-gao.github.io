@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="java 异常," />
+  <meta name="keywords" content="文件对象," />
 
 
 
@@ -81,23 +81,24 @@
 
 
 
-<meta name="description" content="什么是异常Java 异常是 Java 提供的一种识别及响应错误的一致性机制 例如打开本地的一个文件，如下代码，这个时候 FileInputStream 编译时会报错，提示 FileNotFoundException123456789package exception;     import java.io.File;     import java.io.FileInputStream;">
-<meta name="keywords" content="java 异常">
+<meta name="description" content="常见文件操作相关的方法（1） 文件绝对路径：getAbsolutePath() 文件是否存在：exists() 判断是否是文件夹：isDirectory() 判断是否是文件：isFile() 获取文件内容的长度：length() 获取文件最后的修改时间：lastModified() 文件重命名：renameTo()  1234567891011121314151617181920212223pub">
+<meta name="keywords" content="文件对象">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java异常">
-<meta property="og:url" content="https://git-gao.github.io/2018/04/11/java异常/index.html">
+<meta property="og:title" content="文件基本操作">
+<meta property="og:url" content="https://git-gao.github.io/2018/04/14/文件基本操作/index.html">
 <meta property="og:site_name" content="一碗杂货店">
-<meta property="og:description" content="什么是异常Java 异常是 Java 提供的一种识别及响应错误的一致性机制 例如打开本地的一个文件，如下代码，这个时候 FileInputStream 编译时会报错，提示 FileNotFoundException123456789package exception;     import java.io.File;     import java.io.FileInputStream;">
+<meta property="og:description" content="常见文件操作相关的方法（1） 文件绝对路径：getAbsolutePath() 文件是否存在：exists() 判断是否是文件夹：isDirectory() 判断是否是文件：isFile() 获取文件内容的长度：length() 获取文件最后的修改时间：lastModified() 文件重命名：renameTo()  1234567891011121314151617181920212223pub">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://git-gao.github.io/2018/04/11/java异常/1523290041026.png">
-<meta property="og:image" content="https://git-gao.github.io/2018/04/11/java异常/1523374251811.png">
-<meta property="og:image" content="https://git-gao.github.io/2018/04/11/java异常/1523375323460.png">
-<meta property="og:image" content="https://git-gao.github.io/2018/04/11/java异常/1523376303040.png">
-<meta property="og:updated_time" content="2018-04-10T17:02:20.978Z">
+<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523542437886.png">
+<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523547433151.png">
+<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523547482682.png">
+<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523551511629.png">
+<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523706523653.png">
+<meta property="og:updated_time" content="2018-04-14T13:15:33.800Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java异常">
-<meta name="twitter:description" content="什么是异常Java 异常是 Java 提供的一种识别及响应错误的一致性机制 例如打开本地的一个文件，如下代码，这个时候 FileInputStream 编译时会报错，提示 FileNotFoundException123456789package exception;     import java.io.File;     import java.io.FileInputStream;">
-<meta name="twitter:image" content="https://git-gao.github.io/2018/04/11/java异常/1523290041026.png">
+<meta name="twitter:title" content="文件基本操作">
+<meta name="twitter:description" content="常见文件操作相关的方法（1） 文件绝对路径：getAbsolutePath() 文件是否存在：exists() 判断是否是文件夹：isDirectory() 判断是否是文件：isFile() 获取文件内容的长度：length() 获取文件最后的修改时间：lastModified() 文件重命名：renameTo()  1234567891011121314151617181920212223pub">
+<meta name="twitter:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523542437886.png">
 
 
 
@@ -127,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://git-gao.github.io/2018/04/11/java异常/"/>
+  <link rel="canonical" href="https://git-gao.github.io/2018/04/14/文件基本操作/"/>
 
 
 
 
 
-  <title>java异常 | 一碗杂货店</title>
+  <title>文件基本操作 | 一碗杂货店</title>
   
 
 
@@ -314,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://git-gao.github.io/git-gao.github.io/2018/04/11/java异常/">
+    <link itemprop="mainEntityOfPage" href="https://git-gao.github.io/git-gao.github.io/2018/04/14/文件基本操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gaoy">
@@ -331,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java异常</h1>
+          <h1 class="post-title" itemprop="name headline">文件基本操作</h1>
         
 
         <div class="post-meta">
@@ -343,8 +344,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T00:00:00+08:00">
-                2018-04-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-14T21:12:37+08:00">
+                2018-04-14
               </time>
             
 
@@ -354,6 +355,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/git-gao.github.io/categories/Java文件/" itemprop="url" rel="index">
+                    <span itemprop="name">Java文件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -362,8 +385,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/git-gao.github.io/2018/04/11/java异常/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/git-gao.github.io/2018/04/11/java异常/" itemprop="commentsCount"></span>
+                <a href="/git-gao.github.io/2018/04/14/文件基本操作/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/git-gao.github.io/2018/04/14/文件基本操作/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -391,68 +414,34 @@
       
 
       
-        <h3 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h3><p>Java 异常是 Java 提供的一种识别及响应错误的一致性机制</p>
-<p>例如打开本地的一个文件，如下代码，这个时候 FileInputStream 编译时会报错，<br>提示 FileNotFoundException<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> exception; </span><br><span class="line">    <span class="keyword">import</span> java.io.File; </span><br><span class="line">    <span class="keyword">import</span> java.io.FileInputStream;   </span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestException</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;        </span><br><span class="line">            File f = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/e_tex.txt"</span>);              </span><br><span class="line">            <span class="keyword">new</span> FileInputStream(f);   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>使用异常处理机制 try-catch ，不管是文件路径不对还是文件不存在都可以避免异常</p>
-<p><strong>本地文件为 e_text.txt</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Testexcption;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FirstExcptionTest</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		File f = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/e_tex.txt"</span>);</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			<span class="keyword">new</span> FileInputStream(f);</span><br><span class="line">			System.out.println(<span class="string">"文件打开成功！"</span>);</span><br><span class="line">		&#125;<span class="keyword">catch</span> (FileNotFoundException e)&#123;</span><br><span class="line">			System.out.println(<span class="string">"文件打开失败！"</span>);</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="./1523290041026.png" alt="Alt text"></p>
-<p>控制台打印出来的信息是 java.io.FileNotFoundException</p>
-<blockquote>
-<p>printStackTrace()方法的意思是：在命令行打印异常信息在程序中出错的位置及原因。</p>
-</blockquote>
-<p>当使用 System.out.println(e) 时，也会打印错误信息，但仅显示<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.io.FileNotFoundException: F:\winner_info\Learnhow2j\e_tex.txt (系统找不到指定的文件。)</span><br></pre></td></tr></table></figure></p>
-<p><strong>e.printStackTrace();是打印异常的堆栈信息，指明错误原因，其实当发生异常时，通常要处理异常，这是编程的好习惯，所以e.printStackTrace()可以方便你调试程序！</strong></p>
-<hr>
-<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><ol>
-<li><p>多个异常需要处理时，这样可以这样写，好处是捕捉的代码更紧凑，不足之处是，一旦发生异常，不能确定到底是哪种异常，需要通过 instanceof 进行判断具体的异常类型</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">catch</span> (FileNotFoundException | ParseException e)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>或者分别进行catch，这种方法能清晰的了解异常出现的具体情况。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">catch</span> (FileNotFoundException e)&#123;</span><br><span class="line">	<span class="keyword">if</span> (e <span class="keyword">instanceof</span> FileNotFoundException)&#123;</span><br><span class="line">		System.out.println(<span class="string">"文件打开失败！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	System.out.println(e);</span><br><span class="line">&#125;<span class="keyword">catch</span>(ParseException e)&#123;</span><br><span class="line">	<span class="keyword">if</span> (e <span class="keyword">instanceof</span> ParseException)&#123;</span><br><span class="line">		System.out.println(<span class="string">"日期解析错误！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	System.out.println(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>异常都是Exception的子类，使用Exception一起catch</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	<span class="keyword">new</span> FileInputStream(f);</span><br><span class="line">	System.out.println(<span class="string">"文件打开成功！"</span>);</span><br><span class="line">	SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">	Date data = sdf.parse(<span class="string">"2018-0"</span>);</span><br><span class="line">&#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">	<span class="keyword">if</span> (e <span class="keyword">instanceof</span> FileNotFoundException)&#123;</span><br><span class="line">		System.out.println(<span class="string">"文件打开失败！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (e <span class="keyword">instanceof</span> ParseException)&#123;</span><br><span class="line">		System.out.println(<span class="string">"日期解析错误！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	System.out.println(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+        <h3 id="常见文件操作相关的方法（1）"><a href="#常见文件操作相关的方法（1）" class="headerlink" title="常见文件操作相关的方法（1）"></a>常见文件操作相关的方法（1）</h3><ol>
+<li>文件绝对路径：<strong>getAbsolutePath()</strong></li>
+<li>文件是否存在：<strong>exists()</strong></li>
+<li>判断是否是文件夹：<strong>isDirectory()</strong></li>
+<li>判断是否是文件：<strong>isFile()</strong></li>
+<li>获取文件内容的长度：<strong>length()</strong></li>
+<li>获取文件最后的修改时间：<strong>lastModified()</strong></li>
+<li>文件重命名：<strong>renameTo()</strong></li>
 </ol>
-<h4 id="finally语句块"><a href="#finally语句块" class="headerlink" title="finally语句块"></a>finally语句块</h4><blockquote>
-<p> finally 语句块并不一定是会执行的，finally 语句块是在 try 或者 catch 中的 return 语句之前执行的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">newTestFile</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		File file1 = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/JavaSystem/src/TestIO/fileDirectory"</span>);</span><br><span class="line">		File file2 = <span class="keyword">new</span> File(<span class="string">"file2.txt"</span>);</span><br><span class="line">		File file = <span class="keyword">new</span> File(file1,<span class="string">"file2.txt"</span>);</span><br><span class="line">		System.out.println(<span class="string">"当前文件是："</span>+file);</span><br><span class="line">		System.out.println(<span class="string">"绝对路径:"</span>+file.getAbsolutePath());</span><br><span class="line">		System.out.println(<span class="string">"判断是否存在:"</span>+file.exists());</span><br><span class="line">		System.out.println(<span class="string">"判断是否是文件夹:"</span>+file.isDirectory());</span><br><span class="line">		System.out.println(<span class="string">"判断是否是文件:"</span>+file.isFile());</span><br><span class="line">		System.out.println(<span class="string">"获取文件的长度:"</span>+file.length());<span class="comment">//file2.txt:"新文件内容text2"</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//文件最后修改时间</span></span><br><span class="line">		<span class="keyword">long</span> time = file.lastModified();</span><br><span class="line">		Date date = <span class="keyword">new</span> Date(time);</span><br><span class="line">		System.out.println(<span class="string">"文件修改的时间戳"</span>+time+<span class="string">",获取文件的最后修改时间："</span>+date);</span><br><span class="line">		<span class="comment">//文件重命名</span></span><br><span class="line">		File file3 = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/JavaSystem/src/TestIO/fileDirectory/file3.txt"</span>);</span><br><span class="line">		file.renameTo(file3);</span><br><span class="line">	&#125;	</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="./1523542437886.png" alt="Alt text"></p>
+<h3 id="常见文件操作相关的方法（2）"><a href="#常见文件操作相关的方法（2）" class="headerlink" title="常见文件操作相关的方法（2）"></a>常见文件操作相关的方法（2）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">newTestFile2</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/JavaSystem/src/TestIO"</span>);</span><br><span class="line">		<span class="comment">// 以字符串数组的形式，返回当前文件夹下的所有文件（不包含子文件夹的子文件及子文件夹）</span></span><br><span class="line">		String[] fis = file.list();</span><br><span class="line">		System.out.print(<span class="string">"文件列表:"</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; fis.length; i++)&#123;</span><br><span class="line">			System.out.print(fis[i]+<span class="string">","</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">		<span class="comment">// 以文件数组的形式，返回当前文件夹下的所有文件（不包含子文件及子文件夹）</span></span><br><span class="line">		System.out.print(<span class="string">"文件数组:"</span>);</span><br><span class="line">		File[] fs = file.listFiles();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; fs.length; i++)&#123;</span><br><span class="line">			System.out.println(fs[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 以字符串形式返回当前文件所在文件夹</span></span><br><span class="line">		System.out.println(<span class="string">"当前文件的所在文件夹"</span>+file.getParent());</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//以文件形式返回当前文件所在文件夹</span></span><br><span class="line">		System.out.println(<span class="string">"当前文件的所在文件夹"</span>+file.getParentFile());</span><br><span class="line">		</span><br><span class="line">		 <span class="comment">// 如果当前文件夹不存在，则创建该文件夹，如果父文件夹不存在，创建就无效</span></span><br><span class="line">		System.out.println(file.mkdir());</span><br><span class="line">		<span class="comment">// 创建一个空文件,如果父文件夹不存在，就会抛出异常</span></span><br><span class="line">		System.out.println(file.createNewFile());</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 列出所有的盘符c: d: e: 等等</span></span><br><span class="line">		System.out.print(<span class="string">"列出盘符:"</span>);</span><br><span class="line">		File[] litsR = file.listRoots();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; litsR.length; i++)&#123;</span><br><span class="line">			System.out.println(litsR[i]);</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>文件目录结构</p>
+<p><img src="./1523547433151.png" alt="Alt text"></p>
+<p>输出结果：</p>
+<p><img src="./1523547482682.png" alt="Alt text"></p>
+<h4 id="小练习"><a href="#小练习" class="headerlink" title="小练习"></a>小练习</h4><blockquote>
+<p> 一般说来操作系统都会安装在C盘，所以会有一个 C:\WINDOWS目录。<br> 遍历这个目录下所有的文件(不用遍历子目录)<br>找出这些文件里，最大的和最小(非0)的那个文件，打印出他们的文件名</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">finallyTest</span> </span>&#123; </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </span><br><span class="line">		System.out.println(<span class="string">"reture value of test() : "</span> + test()); </span><br><span class="line">	&#125;     </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">test</span><span class="params">()</span></span>&#123; </span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1</span>; 	        </span><br><span class="line">		<span class="keyword">try</span> &#123;  </span><br><span class="line">			System.out.println(<span class="string">"try block"</span>);  </span><br><span class="line">		    i = <span class="number">1</span> / <span class="number">0</span>; <span class="comment">//出现异常</span></span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;  </span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e)&#123; </span><br><span class="line">			System.out.println(<span class="string">"exception block"</span>); </span><br><span class="line">			<span class="keyword">return</span> <span class="number">2</span>; </span><br><span class="line">		&#125;<span class="keyword">finally</span> &#123;  </span><br><span class="line">			System.out.println(<span class="string">"finally block"</span>);  </span><br><span class="line">		&#125; </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果：<br><img src="./1523374251811.png" alt="Alt text"></p>
-<p>关于 finally 的研究可以参考链接<br><a href="https://www.ibm.com/developerworks/cn/java/j-lo-finally/" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/java/j-lo-finally/</a></p>
-<h4 id="throw-异常抛出"><a href="#throw-异常抛出" class="headerlink" title="throw 异常抛出"></a>throw 异常抛出</h4><p>主方法调用method1<br>method1调用method2<br>method2中解析日期</p>
-<p>method2中需要进行异常处理<br>但是method2不打算处理，而是把这个异常通过throws抛出去<br>那么method1就会接到该异常。 处理办法也是两种，要么是try catch处理掉，要么也是抛出去。</p>
-<p>method1选择本地try catch住 一旦try catch住了，就相当于把这个异常消化掉了，主方法在调用method1的时候，就不需要进行异常处理了<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">throwException</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		methord1();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">methord1</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			methord2();</span><br><span class="line">		&#125;<span class="keyword">catch</span>(Exception e)&#123;</span><br><span class="line">			System.out.println(<span class="string">"日期解析失败！"</span>);</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">methord2</span><span class="params">()</span><span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">		SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">		Date data = sdf.parse(<span class="string">"18-01"</span>);</span><br><span class="line">		System.out.println(<span class="string">"日期解析成功！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>输出结果：<br><img src="./1523375323460.png" alt="Alt text"></p>
 <blockquote>
-<p> throws与throw这两个关键字接近，不过意义不一样，有如下区别：</p>
-<ol>
-<li>throws 出现在方法声明上，而throw通常都出现在方法体内。</li>
-<li>throws 表示出现异常的一种可能性，并不一定会发生这些异常；throw则是抛出了异常，执行throw则一定抛出了某个异常对象。</li>
-</ol>
+<p>注: <code>最小的文件不能是0长度</code></p>
 </blockquote>
-<h3 id="异常分类"><a href="#异常分类" class="headerlink" title="异常分类"></a>异常分类</h3><p><img src="./1523376303040.png" alt="Alt text"></p>
-<h4 id="运行异常"><a href="#运行异常" class="headerlink" title="运行异常"></a>运行异常</h4><blockquote>
-<p> <strong>异常可分为运行异常（RuntimeException）和检查异常（Checked Exceptions）两种</strong></p>
-</blockquote>
-<p>RuntimeException 在默认情况下会得到自动处理。所以通常用不着捕获 RuntimeException</p>
-<p>Runtime 如除数是 0 和数组下标越界等，其产生频繁，处理麻烦，若显示申明或者捕获将会对程序的可读性和运行效率影响很大。</p>
-<p>例如常见的运行时异常： <strong><code>ArithmeticException</code>，<code>ArrayIndexOutOfBoundsException</code>，<code>NullPointerException</code></strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">	<span class="comment">//任何除数不能为0:ArithmeticException</span></span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">5</span> / <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//下标越界异常：ArrayIndexOutOfBoundsException</span></span><br><span class="line">	<span class="keyword">int</span> a[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">	a[<span class="number">5</span>] = <span class="number">5</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//空指针异常：NullPointerException</span></span><br><span class="line">	String str = <span class="keyword">null</span>;</span><br><span class="line">	str.length();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="检查异常"><a href="#检查异常" class="headerlink" title="检查异常"></a>检查异常</h4><p>除了runtimeException以外的异常，都属于checkedException</p>
-<p><strong>只有java语言提供了Checked异常，Java认为Checked异常都是可以被处理的异常，所以Java程序必须显示处理Checked异常</strong></p>
-<p>例如上文的 <strong><code>FileNotFoundException</code>、<code>ParseException、ClassNotFoundException</code></strong>，在编译之前就需要进行异常的处理，否则无法通过编译。</p>
-<blockquote>
-<p> 对Checked异常处理方法有两种</p>
-<ol>
-<li>当前方法知道如何处理该异常，则用try…catch块来处理该异常。</li>
-<li>当前方法不知道如何处理，则在定义该方法是声明抛出该异常。</li>
-</ol>
-</blockquote>
-<h4 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h4><p><strong>与异常不同的是Error及其子类的对象不应被抛出。</strong></p>
-<p>当程序发生不可控这种错误时，通常的做法是通知用户并中止程序的执行。</p>
-<p>Error 是 Throwable 的子类，代表编译时间和系统错误，用于指示合理的应用程序<code>不应该试图捕获</code>的严重问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"C:/WINDOWS"</span>);</span><br><span class="line">		<span class="comment">//以文件数组的形式，获取当前文件夹下的所有文件</span></span><br><span class="line">		File[] filist = file.listFiles();</span><br><span class="line">		<span class="comment">//最大整形 2147483648</span></span><br><span class="line">		<span class="keyword">long</span> minSize = Integer.MAX_VALUE;</span><br><span class="line">		<span class="keyword">long</span> maxSize = <span class="number">0</span>;</span><br><span class="line">		File maxL  = <span class="keyword">null</span>;</span><br><span class="line">		File minL  = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; filist.length; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(filist[i].isDirectory())&#123;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (maxSize &lt; filist[i].length())&#123;</span><br><span class="line">				maxSize = filist[i].length();</span><br><span class="line">				maxL = filist[i+<span class="number">1</span>];	</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (minSize &gt; filist[i].length()&amp;&amp; filist[i].length() != <span class="number">0</span>)&#123;</span><br><span class="line">				minSize = filist[i].length();</span><br><span class="line">				minL = filist[i+<span class="number">1</span>];		</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"最大文件："</span> + maxL+<span class="string">",长度："</span>+maxSize);</span><br><span class="line">		System.out.println(<span class="string">"最小文件："</span> + minL+<span class="string">",长度："</span>+minSize);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="./1523551511629.png" alt="Alt text"></p>
+<p><strong>上例，遍历子所有文件包括文件及下的子文件</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">traversalFiles2</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">long</span> minSize = Integer.MAX_VALUE;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">long</span> maxSize = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> File maxL  = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">static</span> File minL = <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//使用递归来遍历一个文件夹的子文件</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">listFiles</span><span class="params">(File file)</span></span>&#123;</span><br><span class="line">		<span class="comment">//如果是文件则判断文件的大小</span></span><br><span class="line">		<span class="keyword">if</span> (file.isFile())&#123;</span><br><span class="line">			<span class="keyword">if</span>(maxSize &lt; file.length())&#123;</span><br><span class="line">				maxSize = file.length();</span><br><span class="line">				maxL = file;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (minSize &gt; file.length()&amp;&amp; file.length() != <span class="number">0</span>)&#123;</span><br><span class="line">				minSize = file.length();</span><br><span class="line">				minL = file;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (file.isDirectory())&#123;</span><br><span class="line">			File[] fileList = file.listFiles();</span><br><span class="line">			<span class="comment">//如果不是空文件夹，则遍历</span></span><br><span class="line">			<span class="keyword">if</span>(<span class="keyword">null</span> != fileList)&#123;</span><br><span class="line">				<span class="keyword">for</span> (File fs : fileList)&#123;</span><br><span class="line">					listFiles(fs);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"C:/WINDOWS"</span>);</span><br><span class="line">		<span class="comment">//以文件数组的形式，获取当前文件夹下的所有文件</span></span><br><span class="line">		System.out.println(<span class="string">"正在查找..."</span>);</span><br><span class="line">		<span class="comment">//开始时间</span></span><br><span class="line">		<span class="keyword">long</span> starTime=System.currentTimeMillis();</span><br><span class="line">		<span class="comment">//开始遍历子文件</span></span><br><span class="line">		listFiles(file);</span><br><span class="line">		<span class="comment">//结束时间</span></span><br><span class="line">		<span class="keyword">long</span> endTime=System.currentTimeMillis();</span><br><span class="line">		<span class="comment">//运行时间</span></span><br><span class="line">		<span class="keyword">long</span> Time=endTime-starTime;</span><br><span class="line">		System.out.println(<span class="string">"最大的文件是:"</span>+ maxL.getAbsolutePath()+<span class="string">",其大小为："</span>+maxSize);</span><br><span class="line">		System.out.println(<span class="string">"最小的文件是:"</span>+ minL.getAbsolutePath()+<span class="string">",其大小为："</span>+minSize);</span><br><span class="line">		System.out.println(<span class="string">"程序运行时间:"</span>+Time/<span class="number">1000</span>+<span class="string">"s"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果:</p>
+<p><img src="./1523706523653.png" alt="Alt text"></p>
 
       
     </div>
@@ -470,7 +459,7 @@
       
         <div class="post-tags">
           
-            <a href="/git-gao.github.io/tags/java-异常/" rel="tag"># java 异常</a>
+            <a href="/git-gao.github.io/tags/文件对象/" rel="tag"># 文件对象</a>
           
         </div>
       
@@ -483,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/git-gao.github.io/2018/04/07/CSS定位流/" rel="next" title="CSS定位流">
-                <i class="fa fa-chevron-left"></i> CSS定位流
+              <a href="/git-gao.github.io/2018/04/11/java异常/" rel="next" title="java异常">
+                <i class="fa fa-chevron-left"></i> java异常
               </a>
             
           </div>
@@ -492,10 +481,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/git-gao.github.io/2018/04/14/文件基本操作/" rel="prev" title="文件基本操作">
-                文件基本操作 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -651,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是异常"><span class="nav-number">1.</span> <span class="nav-text">什么是异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常处理"><span class="nav-number">2.</span> <span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#finally语句块"><span class="nav-number">2.1.</span> <span class="nav-text">finally语句块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#throw-异常抛出"><span class="nav-number">2.2.</span> <span class="nav-text">throw 异常抛出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常分类"><span class="nav-number">3.</span> <span class="nav-text">异常分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#运行异常"><span class="nav-number">3.1.</span> <span class="nav-text">运行异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检查异常"><span class="nav-number">3.2.</span> <span class="nav-text">检查异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Error"><span class="nav-number">3.3.</span> <span class="nav-text">Error</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见文件操作相关的方法（1）"><span class="nav-number">1.</span> <span class="nav-text">常见文件操作相关的方法（1）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见文件操作相关的方法（2）"><span class="nav-number">2.</span> <span class="nav-text">常见文件操作相关的方法（2）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#小练习"><span class="nav-number">2.1.</span> <span class="nav-text">小练习</span></a></li></ol></li></ol></div>
             
 
           </div>
