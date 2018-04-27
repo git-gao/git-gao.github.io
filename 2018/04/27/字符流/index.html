@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="文件对象," />
+  <meta name="keywords" content="java流 字符流," />
 
 
 
@@ -81,24 +81,23 @@
 
 
 
-<meta name="description" content="常见文件操作相关的方法（1） 文件绝对路径：getAbsolutePath() 文件是否存在：exists() 判断是否是文件夹：isDirectory() 判断是否是文件：isFile() 获取文件内容的长度：length() 获取文件最后的修改时间：lastModified() 文件重命名：renameTo()  1234567891011121314151617181920212223pub">
-<meta name="keywords" content="文件对象">
+<meta name="description" content="字符流我们先来看看常说的字符与字节的的定义：（一）“字节”的定义 字节（Byte）是一种计量单位，表示数据量多少，它是计算机信息技术用于计量存储容量的一种计量单位。1个字节等于8位二进制，它是一个8位的二进制数，是一个很具体的存储空间。 （二）“字符”的定义 字符是指计算机中使用的文字和符号，比如1、2、3、A、B、C、~！·#￥%……—*（）——+、等等 前面讲的都是InputStream，这是">
+<meta name="keywords" content="java流 字符流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文件基本操作">
-<meta property="og:url" content="https://git-gao.github.io/2018/04/14/文件基本操作/index.html">
+<meta property="og:title" content="字符流">
+<meta property="og:url" content="https://git-gao.github.io/2018/04/27/字符流/index.html">
 <meta property="og:site_name" content="一碗杂货店">
-<meta property="og:description" content="常见文件操作相关的方法（1） 文件绝对路径：getAbsolutePath() 文件是否存在：exists() 判断是否是文件夹：isDirectory() 判断是否是文件：isFile() 获取文件内容的长度：length() 获取文件最后的修改时间：lastModified() 文件重命名：renameTo()  1234567891011121314151617181920212223pub">
+<meta property="og:description" content="字符流我们先来看看常说的字符与字节的的定义：（一）“字节”的定义 字节（Byte）是一种计量单位，表示数据量多少，它是计算机信息技术用于计量存储容量的一种计量单位。1个字节等于8位二进制，它是一个8位的二进制数，是一个很具体的存储空间。 （二）“字符”的定义 字符是指计算机中使用的文字和符号，比如1、2、3、A、B、C、~！·#￥%……—*（）——+、等等 前面讲的都是InputStream，这是">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523542437886.png">
-<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523547433151.png">
-<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523547482682.png">
-<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523712547466.png">
-<meta property="og:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523706523653.png">
-<meta property="og:updated_time" content="2018-04-14T13:31:30.244Z">
+<meta property="og:image" content="https://git-gao.github.io/2018/04/27/字符流/1524798990469.png">
+<meta property="og:image" content="https://git-gao.github.io/2018/04/27/字符流/1524800237218.png">
+<meta property="og:image" content="https://git-gao.github.io/2018/04/27/字符流/1524800547423.png">
+<meta property="og:image" content="https://git-gao.github.io/2018/04/27/字符流/1524838874642.png">
+<meta property="og:updated_time" content="2018-04-27T15:43:20.099Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文件基本操作">
-<meta name="twitter:description" content="常见文件操作相关的方法（1） 文件绝对路径：getAbsolutePath() 文件是否存在：exists() 判断是否是文件夹：isDirectory() 判断是否是文件：isFile() 获取文件内容的长度：length() 获取文件最后的修改时间：lastModified() 文件重命名：renameTo()  1234567891011121314151617181920212223pub">
-<meta name="twitter:image" content="https://git-gao.github.io/2018/04/14/文件基本操作/1523542437886.png">
+<meta name="twitter:title" content="字符流">
+<meta name="twitter:description" content="字符流我们先来看看常说的字符与字节的的定义：（一）“字节”的定义 字节（Byte）是一种计量单位，表示数据量多少，它是计算机信息技术用于计量存储容量的一种计量单位。1个字节等于8位二进制，它是一个8位的二进制数，是一个很具体的存储空间。 （二）“字符”的定义 字符是指计算机中使用的文字和符号，比如1、2、3、A、B、C、~！·#￥%……—*（）——+、等等 前面讲的都是InputStream，这是">
+<meta name="twitter:image" content="https://git-gao.github.io/2018/04/27/字符流/1524798990469.png">
 
 
 
@@ -128,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://git-gao.github.io/2018/04/14/文件基本操作/"/>
+  <link rel="canonical" href="https://git-gao.github.io/2018/04/27/字符流/"/>
 
 
 
 
 
-  <title>文件基本操作 | 一碗杂货店</title>
+  <title>字符流 | 一碗杂货店</title>
   
 
 
@@ -315,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://git-gao.github.io/git-gao.github.io/2018/04/14/文件基本操作/">
+    <link itemprop="mainEntityOfPage" href="https://git-gao.github.io/git-gao.github.io/2018/04/27/字符流/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gaoy">
@@ -332,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">文件基本操作</h1>
+          <h1 class="post-title" itemprop="name headline">字符流</h1>
         
 
         <div class="post-meta">
@@ -344,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-14T21:12:37+08:00">
-                2018-04-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T23:15:16+08:00">
+                2018-04-27
               </time>
             
 
@@ -355,28 +354,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/git-gao.github.io/categories/Java文件/" itemprop="url" rel="index">
-                    <span itemprop="name">Java文件</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -385,8 +362,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/git-gao.github.io/2018/04/14/文件基本操作/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/git-gao.github.io/2018/04/14/文件基本操作/" itemprop="commentsCount"></span>
+                <a href="/git-gao.github.io/2018/04/27/字符流/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/git-gao.github.io/2018/04/27/字符流/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -414,35 +391,46 @@
       
 
       
-        <h3 id="常见文件操作相关的方法（1）"><a href="#常见文件操作相关的方法（1）" class="headerlink" title="常见文件操作相关的方法（1）"></a>常见文件操作相关的方法（1）</h3><ol>
-<li>文件绝对路径：<strong>getAbsolutePath()</strong></li>
-<li>文件是否存在：<strong>exists()</strong></li>
-<li>判断是否是文件夹：<strong>isDirectory()</strong></li>
-<li>判断是否是文件：<strong>isFile()</strong></li>
-<li>获取文件内容的长度：<strong>length()</strong></li>
-<li>获取文件最后的修改时间：<strong>lastModified()</strong></li>
-<li>文件重命名：<strong>renameTo()</strong></li>
+        <h3 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h3><p>我们先来看看常说的字符与字节的的定义：<br>（一）“字节”的定义</p>
+<p>字节（Byte）是一种计量单位，表示数据量多少，它是计算机信息技术用于计量存储容量的一种计量单位。<br>1个字节等于8位二进制，它是一个8位的二进制数，是一个很具体的存储空间。</p>
+<p>（二）“字符”的定义</p>
+<p>字符是指计算机中使用的文字和符号，比如1、2、3、A、B、C、~！·#￥%……—*（）——+、等等</p>
+<p>前面讲的都是InputStream，这是操作字节流的类，然而我们在程序中往往要从文件等stream中读取字符信息，如果只用InputStream能否读取字符信息呢？当然可以。但是这涉及到了一个编码和解码的问题，传输双方必须才用同一种编码方式才能正确接收，这就导致每次在传输时，传输方需要做这么几件事：</p>
+<p>1）将需要传输的字符编码成指定字节</p>
+<p>2）传输字节</p>
+<p>接收方需要做这么几件事：</p>
+<p>1）接收字节</p>
+<p>2）将字节解码成对应的字符<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/JavaSystem/src/TestFileStream/textStream.txt"</span>);</span><br><span class="line">		<span class="comment">//把流定义在try()里,try,catch或者finally结束的时候，会自动关闭</span></span><br><span class="line">		<span class="keyword">try</span>(FileInputStream fis = <span class="keyword">new</span> FileInputStream(file))&#123;</span><br><span class="line"></span><br><span class="line">			<span class="comment">//创建字节数组，其长度就是文件的长度</span></span><br><span class="line">			<span class="keyword">byte</span>[] all = <span class="keyword">new</span> <span class="keyword">byte</span>[(<span class="keyword">int</span>) file.length()];</span><br><span class="line">			<span class="keyword">int</span> length = fis.read(all);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">byte</span> b : all)&#123;</span><br><span class="line">				System.out.println(b);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 将字节数组中指定位置的字节转码成对应的字符串 </span></span><br><span class="line">			String content = <span class="keyword">new</span> String(all, <span class="number">0</span>, length, Charset.forName(<span class="string">"GBK"</span>));  </span><br><span class="line">            System.out.println(<span class="string">"the content is "</span> + content);  </span><br><span class="line">		&#125;<span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="./1524798990469.png" alt="Alt text"></p>
+<p>可以看到文本内容：i am ok 你好！<br>输出结果：the content is： i am ok 你好！</p>
+<p>从上面的例子中，我们看到只有InputStream就能解决传输字符串的问题了，但是每次都要先读成byte字节，再进行转码，麻烦，能不能直接传字符呢？？？？？</p>
+<p><strong>Reader字符输入流</strong><br><strong>Writer字符输出流</strong><br>专门用于字符的形式读取和写入数据</p>
+<h5 id="使用字符流读取文件"><a href="#使用字符流读取文件" class="headerlink" title="使用字符流读取文件"></a>使用字符流读取文件</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/JavaSystem/src/TestFileStream/textStream.txt"</span>);</span><br><span class="line">		<span class="comment">// 创建基于文件的Reader</span></span><br><span class="line">		<span class="keyword">try</span>(FileReader fr = <span class="keyword">new</span> FileReader(file))&#123;</span><br><span class="line">			<span class="comment">// 创建字符数组，其长度就是文件的长度</span></span><br><span class="line">			<span class="keyword">char</span>[] all = <span class="keyword">new</span> <span class="keyword">char</span>[(<span class="keyword">int</span>) file.length()];</span><br><span class="line">			fr.read(all);</span><br><span class="line">			</span><br><span class="line">			System.out.println(all);</span><br><span class="line">		&#125;<span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<p><img src="./1524800237218.png" alt="Alt text"></p>
+<h5 id="使用字符流把字符串写入到文件"><a href="#使用字符流把字符串写入到文件" class="headerlink" title="使用字符流把字符串写入到文件"></a>使用字符流把字符串写入到文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">		File file = new File(&quot;F:/winner_info/Learnhow2j/JavaSystem/src/TestFileStream/textStream.txt&quot;);</span><br><span class="line">		// 创建基于文件的Reader</span><br><span class="line">		try(FileWriter fw = new FileWriter(file))&#123;</span><br><span class="line">			// 以字符流的形式把数据写入到文件中</span><br><span class="line">            String data=&quot;我是writer!!!&quot;;</span><br><span class="line">			// 创建字符数组，其长度就是文件的长度</span><br><span class="line">			char[] cs = data.toCharArray();</span><br><span class="line">			fw.write(cs);</span><br><span class="line">			</span><br><span class="line">			System.out.println(fw);</span><br><span class="line">		&#125;catch(IOException e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>文件内容：</p>
+<p><img src="./1524800547423.png" alt="Alt text"></p>
+<h5 id="文件加密练习"><a href="#文件加密练习" class="headerlink" title="文件加密练习"></a>文件加密练习</h5><blockquote>
+<p>准备一个文本文件(非二进制)，其中包含ASCII码的字符和中文字符。<br>设计一个方法<br> public static void encodeFile(File encodingFile, File encodedFile);<br> 在这个方法中把encodingFile的内容进行加密，然后保存到encodedFile文件中。<br>加密算法：<br>数字：<br>如果不是9的数字，在原来的基础上加1，比如5变成6, 3变成4<br>如果是9的数字，变成0<br>字母字符：<br>如果是非z字符，向右移动一个，比如d变成e, G变成H<br>如果是z，z-&gt;a, Z-A。<br>字符需要保留大小写<br>非字母字符 ，比如’,&amp;^ 保留不变，中文也保留不变</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">public class TextencodeFile &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		File encodingFile = new File(&quot;F:/winner_info/Learnhow2j/JavaSystem/src/TextFileReader/encodingFile.txt&quot;);</span><br><span class="line">		File encodedFile = new File(&quot;F:/winner_info/Learnhow2j/JavaSystem/src/TextFileReader/encodedFile.txt&quot;);</span><br><span class="line">		encodeFile(encodingFile,encodedFile);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void encodeFile(File encodingFile,File encodedFile)&#123;</span><br><span class="line">		//判断文件是否符合加密要求</span><br><span class="line">		if (encodingFile.length() == 0)&#123;</span><br><span class="line">			throw new RuntimeException(&quot;文件不符合加密要求！！！&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		FileReader fr = null;</span><br><span class="line">		FileWriter fw = null;</span><br><span class="line">		try&#123;</span><br><span class="line">			// 创建基于文件的Reader</span><br><span class="line">			fr = new FileReader(encodingFile);</span><br><span class="line">			char[] frcontent = new char[(int) encodingFile.length()];</span><br><span class="line">			fw = new FileWriter(encodedFile);</span><br><span class="line">			char[] fwcontent = null;</span><br><span class="line">			fr.read(frcontent);</span><br><span class="line">			System.out.print(&quot;加密前的内容：&quot;);</span><br><span class="line">            System.out.println(new String(frcontent).trim());</span><br><span class="line">            encode(frcontent);</span><br><span class="line">			/*//通过ASCII值判断是否满足要求</span><br><span class="line">			 for(int i = 0; i &lt; frcontent.length; i++)&#123;</span><br><span class="line">				char b = frcontent[i];</span><br><span class="line">				if (b &gt;= 48 &amp;&amp; b &lt;= 57)&#123;</span><br><span class="line">					if (b == 57)&#123;</span><br><span class="line">						b = (char) (b - 9);</span><br><span class="line">					&#125;else&#123;</span><br><span class="line">						b = (char) (b + 1);</span><br><span class="line">					&#125;</span><br><span class="line">					</span><br><span class="line">				&#125;else if ((b &gt;= 65 &amp;&amp; b &lt;= 90) || (b &gt;= 97 &amp;&amp; b &lt;= 122))&#123;</span><br><span class="line">					if (b == 90 || b == 122)&#123;</span><br><span class="line">						b = (char) (b - 25);</span><br><span class="line">					&#125;else&#123;</span><br><span class="line">						b = (char) (b + 1);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					</span><br><span class="line">				&#125;</span><br><span class="line">				frcontent[i] = b ;</span><br><span class="line">			&#125;*/</span><br><span class="line">			System.out.print(&quot;加密后的内容：&quot;);</span><br><span class="line">            System.out.println(new String(frcontent).trim());</span><br><span class="line">            fw.write(frcontent);</span><br><span class="line">		&#125;catch(IOException e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;finally&#123;</span><br><span class="line">			try&#123;</span><br><span class="line">				if (null != fr)&#123;</span><br><span class="line">					fr.close();</span><br><span class="line">				&#125;</span><br><span class="line">				if (null != fw)&#123;</span><br><span class="line">					fw.close();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;catch(IOException e)&#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private static void encode(char[] frcontent)&#123;</span><br><span class="line">		for (int i = 0; i &lt; frcontent.length; i++)&#123;</span><br><span class="line">			char b = frcontent[i];</span><br><span class="line">			if (isLetterOrDigit(b))&#123;</span><br><span class="line">				switch(b)&#123;</span><br><span class="line">					case &apos;9&apos;: b = &apos;0&apos;; break;</span><br><span class="line">					case &apos;z&apos;: b = &apos;a&apos;; break;</span><br><span class="line">					case &apos;Z&apos;: b = &apos;A&apos;; break;</span><br><span class="line">					default : b++; break;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			frcontent[i] = b;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static boolean isLetterOrDigit(char c)&#123;</span><br><span class="line">		// 不使用Character类的isLetterOrDigit方法是因为，中文也会被判断为字母</span><br><span class="line">        String letterOrDigital = &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;;</span><br><span class="line">        return -1 == letterOrDigital.indexOf(c)? false:true;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<p><img src="./1524838874642.png" alt="Alt text"></p>
+<ol>
+<li><p><strong>代码未出现报错，但无法把字符流写入到文件中的情况</strong><br>字节流在操作文件时，即使不关闭资源（close方法），文件也能输出，但是如果字符流不使用close方法的话，则不会输出任何内容，说明字符流用的是缓冲区，并且可以使用flush方法强制进行刷新缓冲区，这时才能在不close的情况下输出内容</p>
+</li>
+<li><p><strong>在获取文本中的内容时，如果出现中文的话，文件的长度会变成中文的两倍。就是如果txt文件中有“中国”两个字，在file.length() 中会变成4，因此本身的字符串数据就变成4个了。在控制台输出的时候，就会有小正方形。</strong></p>
+</li>
+<li><p><strong>char[] all = new char[(int) f.length()];   这句查了一下length()返回的是文件的长度（多少个字节），这里是char数组，char占两个字节 相当于2个byte了吧，所以应该大小设置一半（或者一半+1） 就行了吧？</strong><br>如果这个文件里的内容都是数字，则文件的长度与char数组的长度是相等的</p>
+</li>
+<li><p><strong>字节流和字符流使用是非常相似的，那么除了操作代码的不同之外，还有哪些不同呢？</strong><br>字节流在操作的时候本身是不会用到缓冲区（内存）的，是与文件本身直接操作的，而字符流在操作的时候是使用到缓冲区的</p>
+</li>
+<li><p><strong>那开发中究竟用字节流好还是用字符流好呢？</strong><br>在所有的硬盘上保存文件或进行传输的时候都是以字节的方法进行的，包括图片也是按字节完成，而字符是只有在内存中才会形成的，所以使用字节的操作是最多的。</p>
+</li>
+<li><p><strong>如果要java程序实现一个拷贝功能，应该选用字节流进行操作（可能拷贝的是图片），并且采用边读边写的方式（节省内存）。</strong></p>
+</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">newTestFile</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		File file1 = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/JavaSystem/src/TestIO/fileDirectory"</span>);</span><br><span class="line">		File file2 = <span class="keyword">new</span> File(<span class="string">"file2.txt"</span>);</span><br><span class="line">		File file = <span class="keyword">new</span> File(file1,<span class="string">"file2.txt"</span>);</span><br><span class="line">		System.out.println(<span class="string">"当前文件是："</span>+file);</span><br><span class="line">		System.out.println(<span class="string">"绝对路径:"</span>+file.getAbsolutePath());</span><br><span class="line">		System.out.println(<span class="string">"判断是否存在:"</span>+file.exists());</span><br><span class="line">		System.out.println(<span class="string">"判断是否是文件夹:"</span>+file.isDirectory());</span><br><span class="line">		System.out.println(<span class="string">"判断是否是文件:"</span>+file.isFile());</span><br><span class="line">		System.out.println(<span class="string">"获取文件的长度:"</span>+file.length());<span class="comment">//file2.txt:"新文件内容text2"</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//文件最后修改时间</span></span><br><span class="line">		<span class="keyword">long</span> time = file.lastModified();</span><br><span class="line">		Date date = <span class="keyword">new</span> Date(time);</span><br><span class="line">		System.out.println(<span class="string">"文件修改的时间戳"</span>+time+<span class="string">",获取文件的最后修改时间："</span>+date);</span><br><span class="line">		<span class="comment">//文件重命名</span></span><br><span class="line">		File file3 = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/JavaSystem/src/TestIO/fileDirectory/file3.txt"</span>);</span><br><span class="line">		file.renameTo(file3);</span><br><span class="line">	&#125;	</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="./1523542437886.png" alt="Alt text"></p>
-<h3 id="常见文件操作相关的方法（2）"><a href="#常见文件操作相关的方法（2）" class="headerlink" title="常见文件操作相关的方法（2）"></a>常见文件操作相关的方法（2）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">newTestFile2</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"F:/winner_info/Learnhow2j/JavaSystem/src/TestIO"</span>);</span><br><span class="line">		<span class="comment">// 以字符串数组的形式，返回当前文件夹下的所有文件（不包含子文件夹的子文件及子文件夹）</span></span><br><span class="line">		String[] fis = file.list();</span><br><span class="line">		System.out.print(<span class="string">"文件列表:"</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; fis.length; i++)&#123;</span><br><span class="line">			System.out.print(fis[i]+<span class="string">","</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">		<span class="comment">// 以文件数组的形式，返回当前文件夹下的所有文件（不包含子文件及子文件夹）</span></span><br><span class="line">		System.out.print(<span class="string">"文件数组:"</span>);</span><br><span class="line">		File[] fs = file.listFiles();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; fs.length; i++)&#123;</span><br><span class="line">			System.out.println(fs[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 以字符串形式返回当前文件所在文件夹</span></span><br><span class="line">		System.out.println(<span class="string">"当前文件的所在文件夹"</span>+file.getParent());</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//以文件形式返回当前文件所在文件夹</span></span><br><span class="line">		System.out.println(<span class="string">"当前文件的所在文件夹"</span>+file.getParentFile());</span><br><span class="line">		</span><br><span class="line">		 <span class="comment">// 如果当前文件夹不存在，则创建该文件夹，如果父文件夹不存在，创建就无效</span></span><br><span class="line">		System.out.println(file.mkdir());</span><br><span class="line">		<span class="comment">// 创建一个空文件,如果父文件夹不存在，就会抛出异常</span></span><br><span class="line">		System.out.println(file.createNewFile());</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 列出所有的盘符c: d: e: 等等</span></span><br><span class="line">		System.out.print(<span class="string">"列出盘符:"</span>);</span><br><span class="line">		File[] litsR = file.listRoots();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; litsR.length; i++)&#123;</span><br><span class="line">			System.out.println(litsR[i]);</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>文件目录结构</p>
-<p><img src="./1523547433151.png" alt="Alt text"></p>
-<p>输出结果：</p>
-<p><img src="./1523547482682.png" alt="Alt text"></p>
-<h4 id="小练习"><a href="#小练习" class="headerlink" title="小练习"></a>小练习</h4><blockquote>
-<p> 一般说来操作系统都会安装在C盘，所以会有一个 C:\WINDOWS目录。<br> 遍历这个目录下所有的文件(不用遍历子目录)<br>找出这些文件里，最大的和最小(非0)的那个文件，打印出他们的文件名</p>
-</blockquote>
-<blockquote>
-<p>注: <code>最小的文件不能是0长度</code></p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"C:/WINDOWS"</span>);</span><br><span class="line">		<span class="comment">//以文件数组的形式，获取当前文件夹下的所有文件</span></span><br><span class="line">		File[] filist = file.listFiles();</span><br><span class="line">		<span class="comment">//最大整形 2147483648</span></span><br><span class="line">		<span class="keyword">long</span> minSize = Integer.MAX_VALUE;</span><br><span class="line">		<span class="keyword">long</span> maxSize = <span class="number">0</span>;</span><br><span class="line">		File maxL  = <span class="keyword">null</span>;</span><br><span class="line">		File minL  = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; filist.length; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(filist[i].isDirectory())&#123;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (maxSize &lt; filist[i].length())&#123;</span><br><span class="line">				maxSize = filist[i].length();</span><br><span class="line">				maxL = filist[i+<span class="number">1</span>];	</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (minSize &gt; filist[i].length()&amp;&amp; filist[i].length() != <span class="number">0</span>)&#123;</span><br><span class="line">				minSize = filist[i].length();</span><br><span class="line">				minL = filist[i+<span class="number">1</span>];		</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"最大文件："</span> + maxL+<span class="string">",长度："</span>+maxSize);</span><br><span class="line">		System.out.println(<span class="string">"最小文件："</span> + minL+<span class="string">",长度："</span>+minSize);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<p><img src="./1523712547466.png" alt="Alt text"></p>
-<p><strong>上例，遍历子所有文件包括文件及下的子文件</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">traversalFiles2</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">long</span> minSize = Integer.MAX_VALUE;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">long</span> maxSize = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> File maxL  = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">static</span> File minL = <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//使用递归来遍历一个文件夹的子文件</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">listFiles</span><span class="params">(File file)</span></span>&#123;</span><br><span class="line">		<span class="comment">//如果是文件则判断文件的大小</span></span><br><span class="line">		<span class="keyword">if</span> (file.isFile())&#123;</span><br><span class="line">			<span class="keyword">if</span>(maxSize &lt; file.length())&#123;</span><br><span class="line">				maxSize = file.length();</span><br><span class="line">				maxL = file;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (minSize &gt; file.length()&amp;&amp; file.length() != <span class="number">0</span>)&#123;</span><br><span class="line">				minSize = file.length();</span><br><span class="line">				minL = file;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (file.isDirectory())&#123;</span><br><span class="line">			File[] fileList = file.listFiles();</span><br><span class="line">			<span class="comment">//如果不是空文件夹，则遍历</span></span><br><span class="line">			<span class="keyword">if</span>(<span class="keyword">null</span> != fileList)&#123;</span><br><span class="line">				<span class="keyword">for</span> (File fs : fileList)&#123;</span><br><span class="line">					listFiles(fs);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"C:/WINDOWS"</span>);</span><br><span class="line">		<span class="comment">//以文件数组的形式，获取当前文件夹下的所有文件</span></span><br><span class="line">		System.out.println(<span class="string">"正在查找..."</span>);</span><br><span class="line">		<span class="comment">//开始时间</span></span><br><span class="line">		<span class="keyword">long</span> starTime=System.currentTimeMillis();</span><br><span class="line">		<span class="comment">//开始遍历子文件</span></span><br><span class="line">		listFiles(file);</span><br><span class="line">		<span class="comment">//结束时间</span></span><br><span class="line">		<span class="keyword">long</span> endTime=System.currentTimeMillis();</span><br><span class="line">		<span class="comment">//运行时间</span></span><br><span class="line">		<span class="keyword">long</span> Time=endTime-starTime;</span><br><span class="line">		System.out.println(<span class="string">"最大的文件是:"</span>+ maxL.getAbsolutePath()+<span class="string">",其大小为："</span>+maxSize);</span><br><span class="line">		System.out.println(<span class="string">"最小的文件是:"</span>+ minL.getAbsolutePath()+<span class="string">",其大小为："</span>+minSize);</span><br><span class="line">		System.out.println(<span class="string">"程序运行时间:"</span>+Time/<span class="number">1000</span>+<span class="string">"s"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果:</p>
-<p><img src="./1523706523653.png" alt="Alt text"></p>
 
       
     </div>
@@ -460,7 +448,7 @@
       
         <div class="post-tags">
           
-            <a href="/git-gao.github.io/tags/文件对象/" rel="tag"># 文件对象</a>
+            <a href="/git-gao.github.io/tags/java流-字符流/" rel="tag"># java流 字符流</a>
           
         </div>
       
@@ -473,8 +461,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/git-gao.github.io/2018/04/11/java异常/" rel="next" title="java异常">
-                <i class="fa fa-chevron-left"></i> java异常
+              <a href="/git-gao.github.io/2018/04/24/流/" rel="next" title="流">
+                <i class="fa fa-chevron-left"></i> 流
               </a>
             
           </div>
@@ -482,10 +470,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/git-gao.github.io/2018/04/24/流/" rel="prev" title="流">
-                流 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -641,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见文件操作相关的方法（1）"><span class="nav-number">1.</span> <span class="nav-text">常见文件操作相关的方法（1）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见文件操作相关的方法（2）"><span class="nav-number">2.</span> <span class="nav-text">常见文件操作相关的方法（2）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#小练习"><span class="nav-number">2.1.</span> <span class="nav-text">小练习</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符流"><span class="nav-number">1.</span> <span class="nav-text">字符流</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用字符流读取文件"><span class="nav-number">1.0.1.</span> <span class="nav-text">使用字符流读取文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用字符流把字符串写入到文件"><span class="nav-number">1.0.2.</span> <span class="nav-text">使用字符流把字符串写入到文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文件加密练习"><span class="nav-number">1.0.3.</span> <span class="nav-text">文件加密练习</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
