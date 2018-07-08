@@ -4,6 +4,9 @@
     <title><![CDATA[Python 练习（一）]]></title>
     <url>%2Fgit-gao.github.io%2F2018%2F07%2F08%2FPython-%E7%BB%83%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
     <content type="text"><![CDATA[python 练习系列（一）你有一个目录，装了很多照片，把它们的尺寸变成不大于 iPhone5 分辨率的大小。(1136*640) 思路:1.遍历文件夹2.循环处理照片3.保存照片到新的文件夹 代码实现: 12345678910111213141516171819202122232425262728293031323334353637383940414243import osfrom PIL import Image# 遍历文件夹获取照片def getImg(): dirName = "004Image" newDirName = dirName + "_new" # 创建文件夹 if os.path.exists(newDirName) == False: os.mkdir(newDirName) # listdir() 是文件夹操作方法，返回的是一个列表对象 for imgName in os.listdir(dirName): print(imgName) img = Image.open(dirName + "//" + imgName) newImg = imgHandle(img) # 保存到新的文件夹中 newImg.save(os.path.join(newDirName, os.path.basename(imgName)))# 图片处理def imgHandle(img): # IPHONE 5 的尺寸大小 IPHONE5_WIDTH = 1136 IPHONE5_HEIGHT = 640 # 获取图片大小 imgW, imgH = imgSize = img.size newImgSize = imgSize # 如果图片的宽或高大于 iphone5 的宽或高，则等比例缩小尺寸 if imgW &gt; IPHONE5_WIDTH: imgH = IPHONE5_WIDTH * imgW // imgH imgW = IPHONE5_WIDTH if imgH &gt; IPHONE5_HEIGHT: imgW = IPHONE5_HEIGHT * imgW // imgH imgH = IPHONE5_HEIGHT newImg = img.resize((imgW, imgH), Image.ANTIALIAS) return newImgif __name__ == "__main__": getImg() 欢迎关注公众号: 一碗杂货店]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>Python练习系列</tag>
       </tags>
