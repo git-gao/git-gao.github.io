@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="###使用 Python 生成类似于下图中的字母验证码图片 验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现 一、随机数字符串的生成随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码1234ascii_lowercase = &apos;abcdefghijklmnopqrstuvwxyz&apos;ascii_uppercase = &apos;ABCDEFGHIJKLMNOP">
+<meta name="description" content="使用 Python 生成类似于下图中的字母验证码图片 验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现 一、随机数字符串的生成随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码1234ascii_lowercase = &apos;abcdefghijklmnopqrstuvwxyz&apos;ascii_uppercase = &apos;ABCDEFGHIJKLMNOPQRS">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 练习（二）">
 <meta property="og:url" content="https://git-gao.github.io/2018/07/15/Python-练习系列（二）/index.html">
 <meta property="og:site_name" content="一碗杂货店">
-<meta property="og:description" content="###使用 Python 生成类似于下图中的字母验证码图片 验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现 一、随机数字符串的生成随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码1234ascii_lowercase = &apos;abcdefghijklmnopqrstuvwxyz&apos;ascii_uppercase = &apos;ABCDEFGHIJKLMNOP">
+<meta property="og:description" content="使用 Python 生成类似于下图中的字母验证码图片 验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现 一、随机数字符串的生成随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码1234ascii_lowercase = &apos;abcdefghijklmnopqrstuvwxyz&apos;ascii_uppercase = &apos;ABCDEFGHIJKLMNOPQRS">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://git-gao.github.io/2018/07/15/Python-练习系列（二）/code.png">
 <meta property="og:image" content="https://git-gao.github.io/2018/07/15/Python-练习系列（二）/code1.png">
-<meta property="og:updated_time" content="2018-07-15T07:08:20.456Z">
+<meta property="og:updated_time" content="2018-07-15T07:12:36.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 练习（二）">
-<meta name="twitter:description" content="###使用 Python 生成类似于下图中的字母验证码图片 验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现 一、随机数字符串的生成随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码1234ascii_lowercase = &apos;abcdefghijklmnopqrstuvwxyz&apos;ascii_uppercase = &apos;ABCDEFGHIJKLMNOP">
+<meta name="twitter:description" content="使用 Python 生成类似于下图中的字母验证码图片 验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现 一、随机数字符串的生成随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码1234ascii_lowercase = &apos;abcdefghijklmnopqrstuvwxyz&apos;ascii_uppercase = &apos;ABCDEFGHIJKLMNOPQRS">
 <meta name="twitter:image" content="https://git-gao.github.io/2018/07/15/Python-练习系列（二）/code.png">
 
 
@@ -422,7 +422,7 @@
       
 
       
-        <p>###使用 Python 生成类似于下图中的字母验证码图片<br><img src="./code.png" alt="Alt text"></p>
+        <h3 id="使用-Python-生成类似于下图中的字母验证码图片"><a href="#使用-Python-生成类似于下图中的字母验证码图片" class="headerlink" title="使用 Python 生成类似于下图中的字母验证码图片"></a>使用 Python 生成类似于下图中的字母验证码图片</h3><p><img src="./code.png" alt="Alt text"></p>
 <p>验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现</p>
 <p><strong>一、随机数字符串的生成</strong><br>随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ascii_lowercase = <span class="string">'abcdefghijklmnopqrstuvwxyz'</span></span><br><span class="line">ascii_uppercase = <span class="string">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></span><br><span class="line">ascii_letters = ascii_lowercase + ascii_uppercase</span><br><span class="line">digits = <span class="string">'0123456789'</span></span><br></pre></td></tr></table></figure></p>
 <p>调用 string.ascii_letters 和 string.digits 即可产生随机数字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str = string.ascii_letters + string.digits</span><br></pre></td></tr></table></figure></p>
@@ -555,8 +555,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -633,6 +642,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-Python-生成类似于下图中的字母验证码图片"><span class="nav-number">1.</span> <span class="nav-text">使用 Python 生成类似于下图中的字母验证码图片</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
