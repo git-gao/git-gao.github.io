@@ -84,16 +84,16 @@
 <meta name="description" content="###使用 Python 生成类似于下图中的字母验证码图片 验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现 一、随机数字符串的生成随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码1234ascii_lowercase = &apos;abcdefghijklmnopqrstuvwxyz&apos;ascii_uppercase = &apos;ABCDEFGHIJKLMNOP">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 练习系列（二）">
+<meta property="og:title" content="Python 练习（二）">
 <meta property="og:url" content="https://git-gao.github.io/2018/07/15/Python-练习系列（二）/index.html">
 <meta property="og:site_name" content="一碗杂货店">
 <meta property="og:description" content="###使用 Python 生成类似于下图中的字母验证码图片 验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现 一、随机数字符串的生成随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码1234ascii_lowercase = &apos;abcdefghijklmnopqrstuvwxyz&apos;ascii_uppercase = &apos;ABCDEFGHIJKLMNOP">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://git-gao.github.io/2018/07/15/Python-练习系列（二）/code.png">
 <meta property="og:image" content="https://git-gao.github.io/2018/07/15/Python-练习系列（二）/code1.png">
-<meta property="og:updated_time" content="2018-07-15T07:01:53.090Z">
+<meta property="og:updated_time" content="2018-07-15T07:08:20.456Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 练习系列（二）">
+<meta name="twitter:title" content="Python 练习（二）">
 <meta name="twitter:description" content="###使用 Python 生成类似于下图中的字母验证码图片 验证码由26个英文字母大小写再加上数字随机组成，再生成图片就能实现 一、随机数字符串的生成随机字母我们可以使用 python 的 string 模块，来看看其中的一段源码1234ascii_lowercase = &apos;abcdefghijklmnopqrstuvwxyz&apos;ascii_uppercase = &apos;ABCDEFGHIJKLMNOP">
 <meta name="twitter:image" content="https://git-gao.github.io/2018/07/15/Python-练习系列（二）/code.png">
 
@@ -131,7 +131,7 @@
 
 
 
-  <title>Python 练习系列（二） | 一碗杂货店</title>
+  <title>Python 练习（二） | 一碗杂货店</title>
   
 
 
@@ -329,7 +329,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python 练习系列（二）</h1>
+          <h1 class="post-title" itemprop="name headline">Python 练习（二）</h1>
         
 
         <div class="post-meta">
@@ -364,8 +364,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/git-gao.github.io/categories/python练习系列/" itemprop="url" rel="index">
-                    <span itemprop="name">python练习系列</span>
+                  <a href="/git-gao.github.io/categories/python-练习系列/" itemprop="url" rel="index">
+                    <span itemprop="name">python 练习系列</span>
                   </a>
                 </span>
 
@@ -375,7 +375,7 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/git-gao.github.io/categories/python练习系列/python-图片处理/" itemprop="url" rel="index">
+                  <a href="/git-gao.github.io/categories/python-练习系列/python-图片处理/" itemprop="url" rel="index">
                     <span itemprop="name">python 图片处理</span>
                   </a>
                 </span>
@@ -433,11 +433,11 @@
 <p>PIL：是python image library的缩写，图像处理的模块。主要的类包括image，imageFont，imageDraw，imageFilter</p>
 </blockquote>
 <ul>
-<li><p>创建一个图片</p>
+<li>创建一个图片</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from PIL import Image, ImageFont, ImageDraw, ImageFilter</span><br><span class="line"></span><br><span class="line"># 获取一个Image对象，参数分别是RGB模式。宽200，高50，白色</span><br><span class="line">image = Image.new(&apos;RGB&apos;, (200, 50), &apos;#ffffff&apos;)</span><br><span class="line"># 获取图片的大小</span><br><span class="line">width, height = image.size</span><br><span class="line"># 保存图片，名为test.png格式为png的图片</span><br><span class="line">image.save(open(&apos;006Image/test.png&apos;, &apos;wb&apos;), &apos;png&apos;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>往图片里字写数字，draw.text() </p>
-</li>
+<ul>
+<li>往图片里字写数字，draw.text()</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text(self, xy, text, fill=None, font=None, anchor=None,*args, **kwargs)</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -445,16 +445,17 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 获取一个随机文字颜色(r,g,b)格式的</span><br><span class="line">def getFontRandomColor():</span><br><span class="line">    c1 = random.randint(64, 255)</span><br><span class="line">    c2 = random.randint(64, 255)</span><br><span class="line">    c3 = random.randint(64, 255)</span><br><span class="line">    return (c1, c2, c3)</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>生成随机颜色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 获取一个随机背景颜色(r,g,b)格式的</span><br><span class="line">def getBgRandomColor():</span><br><span class="line">    c1 = random.randint(32, 127)</span><br><span class="line">    c2 = random.randint(32, 127)</span><br><span class="line">    c3 = random.randint(32, 127)</span><br><span class="line">    return (c1, c2, c3)</span><br><span class="line"></span><br><span class="line"># 创建 font 对象,字体样式为 arial.ttf ，字体大小为 32</span><br><span class="line">font = ImageFont.truetype(&quot;arial.ttf&quot;, 32)</span><br><span class="line"># 创建一个画笔对象</span><br><span class="line">draw = ImageDraw.Draw(image)</span><br><span class="line"># 添加数字，确定坐标位置</span><br><span class="line">draw.text((20 + i*50, 10), code, font=font, fill=getFontRandomColor())</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>图片模糊处理 image.filter()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image = image.filter(ImageFilter.BLUR)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>填充噪点 draw.point()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for x in range(width):</span><br><span class="line">       for y in range(height):</span><br><span class="line">           draw.point((x, y), fill=getBgRandomColor())</span><br></pre></td></tr></table></figure>
-</li>
+<li>生成随机颜色</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 获取一个随机背景颜色(r,g,b)格式的</span><br><span class="line">def getBgRandomColor():</span><br><span class="line">    c1 = random.randint(32, 127)</span><br><span class="line">    c2 = random.randint(32, 127)</span><br><span class="line">    c3 = random.randint(32, 127)</span><br><span class="line">    return (c1, c2, c3)</span><br><span class="line"></span><br><span class="line"># 创建 font 对象,字体样式为 arial.ttf ，字体大小为 32</span><br><span class="line">font = ImageFont.truetype(&quot;arial.ttf&quot;, 32)</span><br><span class="line"># 创建一个画笔对象</span><br><span class="line">draw = ImageDraw.Draw(image)</span><br><span class="line"># 添加数字，确定坐标位置</span><br><span class="line">draw.text((20 + i*50, 10), code, font=font, fill=getFontRandomColor())</span><br></pre></td></tr></table></figure>
+<ul>
+<li>图片模糊处理 image.filter()</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image = image.filter(ImageFilter.BLUR)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>填充噪点 draw.point()</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for x in range(width):</span><br><span class="line">       for y in range(height):</span><br><span class="line">           draw.point((x, y), fill=getBgRandomColor())</span><br></pre></td></tr></table></figure>
 <p>完整代码示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">from PIL import Image, ImageFont, ImageDraw, ImageFilter</span><br><span class="line">import string</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 生成随机数</span><br><span class="line">def getRandomCode():</span><br><span class="line">    # 随机数列表</span><br><span class="line">    str = string.ascii_letters + string.digits</span><br><span class="line">    # 产生随机数字</span><br><span class="line">    code = random.choice(str)</span><br><span class="line">    return code</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 获取一个随机文字颜色(r,g,b)格式的</span><br><span class="line">def getFontRandomColor():</span><br><span class="line">    c1 = random.randint(64, 255)</span><br><span class="line">    c2 = random.randint(64, 255)</span><br><span class="line">    c3 = random.randint(64, 255)</span><br><span class="line">    return (c1, c2, c3)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 获取一个随机背景颜色(r,g,b)格式的</span><br><span class="line">def getBgRandomColor():</span><br><span class="line">    c1 = random.randint(32, 127)</span><br><span class="line">    c2 = random.randint(32, 127)</span><br><span class="line">    c3 = random.randint(32, 127)</span><br><span class="line">    return (c1, c2, c3)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 制作验证码图片</span><br><span class="line">def createImg():</span><br><span class="line">    # 获取一个Image对象，参数分别是RGB模式。宽150，高30，红色</span><br><span class="line">    image = Image.new(&apos;RGB&apos;, (200, 50), &apos;#efefef&apos;)</span><br><span class="line">    # 图片的大小</span><br><span class="line">    width, height = image.size</span><br><span class="line">    # 创建 font 对象</span><br><span class="line">    font = ImageFont.truetype(&quot;arial.ttf&quot;, 32)</span><br><span class="line"></span><br><span class="line">    # 获取一个画笔对象，将图片对象传过去</span><br><span class="line">    draw = ImageDraw.Draw(image)</span><br><span class="line">    # 填充噪点 draw.point()</span><br><span class="line">    for x in range(width):</span><br><span class="line">        for y in range(height):</span><br><span class="line">            draw.point((x, y), fill=getBgRandomColor())</span><br><span class="line">    # 产生四个随机数,添加到图片中</span><br><span class="line">    for i in range(4):</span><br><span class="line">        # 产生随机数</span><br><span class="line">        code = getRandomCode()</span><br><span class="line">        # 设置每个 code 的颜色</span><br><span class="line">        fontColor = getFontRandomColor()</span><br><span class="line">        # 添加数字，确定坐标位置</span><br><span class="line">        draw.text((20 + i*50, 10), code, font=font, fill=fontColor)</span><br><span class="line"></span><br><span class="line">    # 模糊处理</span><br><span class="line">    image = image.filter(ImageFilter.BLUR)</span><br><span class="line">    # 保存图片，名为test.png格式为png的图片</span><br><span class="line">    image.save(open(&apos;test.png&apos;, &apos;wb&apos;), &apos;png&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    createImg()</span><br></pre></td></tr></table></figure></p>
 <p><img src="./code1.png" alt="Alt text"></p>
 
@@ -581,7 +582,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/git-gao.github.io/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
